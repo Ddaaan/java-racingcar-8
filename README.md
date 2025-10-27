@@ -1,7 +1,10 @@
 # java-racingcar-precourse
+
 ## 기능 목록
-- [ ] 자동차 갯수 및 이름 입력받기 (이름은 쉼표로 구분, 5자 이하 제한)
-- [ ] 자동차 이름이 6자 이상이면 예외처리 `llegalArgumentException`
+
+- [ ] 자동차 이름 입력받기 (이름은 쉼표로 구분, 5자 이하 제한)
+- [ ] 자동차 이름이 6자 이상이면 `llegalArgumentException` 예외처리
+- [ ] 자동차 이름에 빈 값이 있으면 `llegalArgumentException` 예외처리
 - [ ] 이동 횟수 입력받기
 - [ ] 0~9 랜덤값 생성 후 4 이상이면 전진
 - [ ] 각 시도마다 결과 출력
