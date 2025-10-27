@@ -9,6 +9,7 @@ public class Application {
     try {
       InputView inputView = new InputView();
       List<String> carNames = inputView.readCarNames();
+      int attempts = inputView.readAttemptCount();
     } catch (IllegalArgumentException e) {
       System.out.println(e.getMessage());
     }
