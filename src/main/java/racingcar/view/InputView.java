@@ -61,7 +61,7 @@ public class InputView {
     // 오버플로우 파싱
     BigInteger value;
     try {
-      value = Integer.parseInt(trimmed);
+      value = new BigInteger(trimmed);
     } catch (NumberFormatException e) {
       throw new IllegalArgumentException("시도 횟수는 정수여야 합니다.");
     }
