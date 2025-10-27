@@ -7,8 +7,6 @@
 - [ ] 자동차 이름 입력받기 (쉼표 구분, 앞뒤 공백 제거)
 - [ ] 자동차 이름 길이 1~5자 이내 검증
 - [ ] 자동차 이름에 빈 값만 있는 경우 `IllegalArgumentException` 발생
-
-
 - [ ] 시도 횟수 입력받기
 - [ ] 시도 횟수 정수 파싱 실패 시 `IllegalArgumentException` 발생
 - [ ] 시도 횟수 오버플로우 (int 범위가 넘을 경우) `IllegalArgumentException` 발생
