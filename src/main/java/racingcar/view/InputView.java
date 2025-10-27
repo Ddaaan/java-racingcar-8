@@ -44,6 +44,26 @@ public class InputView {
     return names;
   }
 
+  static int parseAttemptCount(String input) {
+    if (input == null) {
+      throw new IllegalArgumentException("입력값이 없습니다.");
+    }
+
+    String trimmed = input.trim();
+    if (trimmed.isEmpty()) {
+      throw new IllegalArgumentException("입력이 없습니다. 시도 횟수를 입력하세요.");
+    }
+
+    int value;
+    try {
+      value = Integer.parseInt(trimmed);
+    } catch (NumberFormatException e) {
+      throw new IllegalArgumentException("시도 횟수는 정수여야 합니다.");
+    }
+
+    return value;
+  }
+
   static void validateNames(List<String> carNames) {
     if (carNames.isEmpty()) {
       throw new IllegalArgumentException(("자동차 이름이 없습니다."));
