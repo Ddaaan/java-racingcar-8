@@ -9,7 +9,7 @@ public class InputView {
 
   public List<String> readCarNames() {
     System.out.println(INPUT_PROMPT);
-    String link = Console.readLine();
+    String line = Console.readLine();
 
     List<String> CarNames = parseNames(link);
     validateNames(CarNames);
