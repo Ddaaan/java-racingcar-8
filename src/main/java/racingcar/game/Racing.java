@@ -21,7 +21,7 @@ public class Racing {
   private void playOneRound() {
     for (Car car : cars) {
       int rand = Randoms.pickNumberInRange(0, 9);
-      car.moveIf(rand);
+      car.move(rand);
     }
   }
 
