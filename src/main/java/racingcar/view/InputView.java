@@ -11,7 +11,7 @@ public class InputView {
     System.out.println(INPUT_PROMPT);
     String line = Console.readLine();
 
-    List<String> CarNames = parseNames(link);
+    List<String> CarNames = parseNames(line);
     validateNames(CarNames);
 
     return CarNames;
