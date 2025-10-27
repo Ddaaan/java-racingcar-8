@@ -17,6 +17,16 @@ public class InputView {
     return CarNames;
   }
 
+  public int readAttemptCount() {
+    System.out.println(COUNT_PROMPT);
+    String line = Console.readLine();
+
+    int count = parseAttemptCount(line);
+    validateAttemptCount(count);
+
+    return count;
+  }
+
   // 파싱
   static List<String> parseNames(String input) {
     if (input == null) {
