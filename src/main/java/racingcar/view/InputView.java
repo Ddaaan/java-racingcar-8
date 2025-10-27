@@ -12,6 +12,7 @@ public class InputView {
     String link = Console.readLine();
 
     List<String> CarNames = parseNames(link);
+    validateNames(CarNames);
 
     return CarNames;
   }
@@ -30,5 +31,19 @@ public class InputView {
       names.add(deleteSpace);
     }
     return names;
+  }
+
+  static void validateNames(List<String> carNames) {
+    if (carNames.isEmpty()) {
+      throw new IllegalArgumentException(("자동차 이름이 없습니다."));
+    }
+    for (String name : carNames) {
+      if (name.isBlank()) {
+        throw new IllegalArgumentException("자동차 이름에 빈 값이 있습니다.");
+      }
+      if (name.length() > 5) {
+        throw new IllegalArgumentException("각 자동차 이름은 5자 이하여야 합니다. 자동차 이름 " + name + "이 잘못되었습니다.");
+      }
+    }
   }
 }
