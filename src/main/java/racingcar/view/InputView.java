@@ -66,7 +66,12 @@ public class InputView {
       throw new IllegalArgumentException("시도 횟수는 정수여야 합니다.");
     }
 
-    return value;
+    BigInteger intMax = BigInteger.valueOf(Integer.MAX_VALUE);
+    if (value.compareTo(intMax) > 0) {
+      throw new IllegalArgumentException("시도 횟수가 너무 큽니다. 2,147,483,647 이하만 입력 가능합니다..");
+    }
+
+    return value.intValue();
   }
 
   static void validateNames(List<String> carNames) {
