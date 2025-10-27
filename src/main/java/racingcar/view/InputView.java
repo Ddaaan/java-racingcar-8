@@ -54,7 +54,12 @@ public class InputView {
       throw new IllegalArgumentException("입력이 없습니다. 시도 횟수를 입력하세요.");
     }
 
-    int value;
+    if (!trimmed.matches("^[0-9]+$")) {
+      throw new IllegalArgumentException("시도 횟수는 정수여야 합니다. 다른 문자가 혼합되면 안됩니다.");
+    }
+
+    // 오버플로우 파싱
+    BigInteger value;
     try {
       value = Integer.parseInt(trimmed);
     } catch (NumberFormatException e) {
