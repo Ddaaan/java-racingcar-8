@@ -1,6 +1,7 @@
 package racingcar.view;
 
 import camp.nextstep.edu.missionutils.Console;
+import java.util.ArrayList;
 import java.util.List;
 
 public class InputView {
@@ -10,6 +11,24 @@ public class InputView {
     System.out.println(INPUT_PROMPT);
     String link = Console.readLine();
 
+    List<String> CarNames = parseNames(link);
+
+    return CarNames;
   }
 
+  // 파싱
+  static List<String> parseNames(String input) {
+    if (input == null) {
+      throw new IllegalArgumentException("입력값이 없습니다");
+    }
+
+    String[] tokens = input.split(",");
+    List<String> names = new ArrayList<>(tokens.length);
+
+    for (String token : tokens) {
+      String deleteSpace = token.trim();
+      names.add(deleteSpace);
+    }
+    return names;
+  }
 }
